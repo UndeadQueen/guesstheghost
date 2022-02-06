@@ -21,3 +21,61 @@
   top: 82px;
   left: 300px;
 }
+
+h4 {
+  position: absolute;
+  top: 10px;
+  left: 300px;
+}
+.winners {
+  position: absolute;
+  top: 15px;
+  left: 380px;
+}
+.ghosts {
+  position: absolute;
+}
+.Shade {
+}
+.Banshee {
+}
+.Onryo {
+}
+.Goryo {
+}
+.Spirit {
+  top: 10px;
+  left: 1000px;
+}
+.Polterguist {
+}
+.Mimic {
+}
+.Demon {
+}
+.Yokai {
+}
+.Jinn {
+}
+.Mare {
+}
+.Myling {
+}
+.Raiju {
+}
+.Revenant {
+}
+.Yurei {
+}
+.Obake {
+}
+.Phantom {
+}
+.Oni {
+}
+.Twins {
+}
+.Hantu {
+}
+.Wraith {
+}

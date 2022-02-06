@@ -52,6 +52,10 @@ function getGhostType() {
             break;
         case "The Mimic":
             break;
+        case "Spirit":
+            break;
+        case "Onryo":
+            break;
     }
     return ghostType;
 }

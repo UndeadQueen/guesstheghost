@@ -1,0 +1,23 @@
+.User {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  width: 105px;
+}
+.ghostroom {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  width: 101px;
+}
+.ghosttype {
+  position: absolute;
+  top: 82px;
+  left: 100px;
+  width: 55px;
+}
+.submitbutton {
+  position: absolute;
+  top: 82px;
+  left: 300px;
+}

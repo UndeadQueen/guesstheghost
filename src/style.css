@@ -36,46 +36,139 @@ h4 {
   position: absolute;
 }
 .Shade {
+  top: 330px;
 }
 .Banshee {
+  top: 170px;
 }
 .Onryo {
+  top: 250px;
 }
 .Goryo {
+  top: 370px;
 }
-.Spirit {
-  top: 10px;
-  left: 1000px;
-}
+
 .Polterguist {
+  top: 30px;
 }
 .Mimic {
+  top: 410px;
 }
 .Demon {
+  top: 70px;
 }
 .Yokai {
+  top: 90px;
 }
 .Jinn {
+  top: 310px;
 }
 .Mare {
+  top: 50px;
 }
 .Myling {
+  top: 110px;
 }
 .Raiju {
+  top: 130px;
 }
 .Revenant {
+  top: 190px;
 }
 .Yurei {
+  top: 210px;
 }
 .Obake {
+  top: 270px;
 }
 .Phantom {
+  top: 290px;
 }
 .Oni {
+  top: 350px;
 }
 .Twins {
+  top: 390px;
 }
 .Hantu {
+  top: 230px;
 }
 .Wraith {
+  top: 150px;
+}
+div {
+  position: absolute;
+  height: 500px;
+  width: 150px;
+  padding-left: 10px;
+  padding-top: 10px;
+  left: 900px;
+  top: 20px;
+}
+.ghostnames {
+  position: absolute;
+  left: 40px;
+}
+.Spirittext {
+  top: -5px;
+}
+.Polterguisttext {
+  top: 15px;
+}
+.Maretext {
+  top: 35px;
+}
+.Demontext {
+  top: 55px;
+}
+.Yokaitext {
+  top: 75px;
+}
+.Mylingtext {
+  top: 95px;
+}
+.Raijutext {
+  top: 115px;
+}
+.Wraithtext {
+  top: 135px;
+}
+.Bansheetext {
+  top: 155px;
+}
+.Revenanttext {
+  top: 175px;
+}
+.Yureitext {
+  top: 195px;
+}
+.Hantutext {
+  top: 215px;
+}
+.Onryotext {
+  top: 235px;
+}
+.Obaketext {
+  top: 255px;
+}
+.Phantomtext {
+  top: 275px;
+}
+.Jinntext {
+  top: 295px;
+}
+.Shadetext {
+  top: 315px;
+}
+.Onitext {
+  top: 335px;
+}
+.Goryotext {
+  top: 355px;
+}
+.Twinstext {
+  top: 375px;
+}
+.Mimictext {
+  top: 395px;
 }

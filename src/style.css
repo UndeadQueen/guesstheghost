@@ -172,3 +172,22 @@ div {
 .Mimictext {
   top: 395px;
 }
+li {
+  height: 20px;
+  position: absolute;
+  width: 600px;
+  left: 50px;
+  list-style: none;
+}
+
+li {
+  /* position: absolute; */
+  /* background-color: blue; */
+  width: auto;
+  padding: auto;
+  height: auto;
+}
+
+li + li {
+  margin-top: 20px;
+}

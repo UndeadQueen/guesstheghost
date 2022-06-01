@@ -172,15 +172,16 @@ div {
 .Mimictext {
   top: 395px;
 }
-li {
+.userslist {
   height: 20px;
   position: absolute;
   width: 600px;
   left: 50px;
   list-style: none;
+  top: 200px;
 }
 
-li {
+.userslist {
   /* position: absolute; */
   /* background-color: blue; */
   width: auto;
@@ -188,6 +189,6 @@ li {
   height: auto;
 }
 
-li + li {
+.userslist + .userslist {
   margin-top: 20px;
 }

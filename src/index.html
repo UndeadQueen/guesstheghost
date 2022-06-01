@@ -1,55 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess The Ghost</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<body>
+  <body>
     <p>User:</p>
-    <input type="text" name="User" id="user" class="User">
+    <input type="text" name="User" id="user" class="User" maxlength="20" minlength="4" required/>
     <p>Ghost Room:</p>
-    <input type="text" name="ghostroom" id="ghostroom" class="ghostroom">
+    <input type="text" name="roomguess" id="ghostroom" class="ghostroom" minlength="5" maxlength="27" required/>
     <p>Ghost Type:</p>
-    <input type="text" name="ghosttype" id="ghosttype" class="ghosttype">
+    <input type="text" name="typeguess" id="ghosttype" class="ghosttype" required/>
+    <input type="text" name="correctghost" id="correctghost" />
+    <button id="ghosts">select ghosts</button>
     <button type="submit" class="submitbutton">Submit Guess</button>
     <button type="remove" id="remove">Clear</button>
     <h4>Winners :</h4>
     <p class="winners"></p>
-    <ul id="list">
-        
-    </ul>
+    <div id="list"></div>
     <div>
-        <input type="radio" name="ghosttype" id="" class="ghosts Spirit"><p class="Spirittext ghostnames">Spirit</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Polterguist"><p class="Polterguisttext ghostnames">Polterguist</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Mare"><p class="Maretext ghostnames">Mare</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Demon"><p class="Demontext ghostnames">Demon</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Yokai"><p class="Yokaitext ghostnames">Yokai</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Myling"><p class="Mylingtext ghostnames">Myling</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Raiju"><p class="Raijutext ghostnames">Raiju</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Wraith"><p class="Wraithtext ghostnames">Wraith</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Banshee"><p class="Bansheetext ghostnames">Banshee</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Revenant"><p class="Revenanttext ghostnames">Revenant</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Yurei"><p class="Yureitext ghostnames">Yurei</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Hantu"><p class="Hantutext ghostnames">Hantu</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Onryo"><p class="Onryotext ghostnames">Onryo</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Obake"><p class="Obaketext ghostnames">Obake</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Phantom"><p class="Phantomtext ghostnames">Phantom</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Jinn"><p class="Jinntext ghostnames">Jinn</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Shade"><p class="Shadetext ghostnames">Shade</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Oni"><p class="Onitext ghostnames">Oni</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Goryo"><p class="Goryotext ghostnames">Goryo</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Twins"><p class="Twinstext ghostnames">The Twins</p>
-        <input type="radio" name="ghosttype" id="" class="ghosts Mimic"><p class="Mimictext ghostnames">The Mimic</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Spirit" />
+      <p class="Spirittext ghostnames">Spirit</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Polterguist" />
+      <p class="Polterguisttext ghostnames">Polterguist</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Mare" />
+      <p class="Maretext ghostnames">Mare</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Demon" />
+      <p class="Demontext ghostnames">Demon</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Yokai" />
+      <p class="Yokaitext ghostnames">Yokai</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Myling" />
+      <p class="Mylingtext ghostnames">Myling</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Raiju" />
+      <p class="Raijutext ghostnames">Raiju</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Wraith" />
+      <p class="Wraithtext ghostnames">Wraith</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Banshee" />
+      <p class="Bansheetext ghostnames">Banshee</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Revenant" />
+      <p class="Revenanttext ghostnames">Revenant</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Yurei" />
+      <p class="Yureitext ghostnames">Yurei</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Hantu" />
+      <p class="Hantutext ghostnames">Hantu</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Onryo" />
+      <p class="Onryotext ghostnames">Onryo</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Obake" />
+      <p class="Obaketext ghostnames">Obake</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Phantom" />
+      <p class="Phantomtext ghostnames">Phantom</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Jinn" />
+      <p class="Jinntext ghostnames">Jinn</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Shade" />
+      <p class="Shadetext ghostnames">Shade</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Oni" />
+      <p class="Onitext ghostnames">Oni</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Goryo" />
+      <p class="Goryotext ghostnames">Goryo</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Twins" />
+      <p class="Twinstext ghostnames">The Twins</p>
+      <input type="radio" name="ghosttype" id="" class="ghosts Mimic" />
+      <p class="Mimictext ghostnames">The Mimic</p>
     </div>
-        <ol>
-    </ol>
-</body>
-<script src="./index.js"></script>
-
+    <ol></ol>
+  </body>
+  <script src="./index.js"></script>
 </html>

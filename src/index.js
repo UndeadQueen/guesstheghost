@@ -1,19 +1,19 @@
-let User = [""];
-let ghostType = [""];
-let ghostRoom = [""];
+const User = $("input[name=User]");
+const ghostType = $("input[name=typeguess]");
+const ghostRoom = $("input[name=roomguess]");
 let correctGhost = '';
 let correctUser = [""]
 // 
 function getGhostType() {
     switch (ghostType) {
-        case $("input[class=Shade]"):
-            $("ul").filter("Shade")
+        case $("input[class=Shade][type=radio]"):
+            $("ul").filter("Shade").css("background-color: yellow")
             break;
-        case $("input[class=Banshee]"):
-            $("ul").filter("Banshee")
+        case $("input[class=Banshee][type=radio]"):
+            $("ul").filter("Banshee").css("background-color: yellow")
             break;
-        case "Polterguist":
-            $("ul").filter("Polterguist")
+        case $("input[type=radio][class=Polterguist]"):
+            $("ul").filter("Polterguist").css("background-color: yellow")
             break;
         case "Jinn":
             $("ul").filter("Jinn")
@@ -71,25 +71,51 @@ function getGhostRoom() {
     return ghostRoom;
 }
 function getCorrectGhost(iscorrectGhost) {
-
 }
 function log(args) {
     console.log(args)
 }
 $(document).ready(function () {
     $(".submitbutton").click(function () {
-        log("Hello world")
-        $("#list").append(function() {
-        $("ul").append("<li>" + $("input[name=User]").val() +" | "+ $("input[name=ghostroom]").val() + " | " + $("input[name=ghosttype]").val() + "</li>"); 
-        $("input[type=text]").val("")
+        try {
+            if ($(User).val().length <= 0) {
+                alert("please fill out the required areas")
+                log("please fill out the required areas")
+            } else if ($(ghostRoom).val.length <= 0) {
+                alert("please fill out the required areas")
+                log("please fill out the required areas")
+            } else if ($(ghostType).val().length <= 0) {
+                alert("please fill out the required areas")
+                log("please fill out the required areas")
+            }
+             else {
+                $("#list").append(function() {
+                    $("#list").append("<p>" + User.val() +" | "+ ghostRoom.val() + " | " + ghostType.val() + "</p>").addClass("userslist")
+                    $("input[type=text").val("")
+                })
+            }
+        }
+        catch(err) {
+            console.log(err)
+        }
+        // log("Hello world")
+        // $("#list").append(function() {
+        // $("#list").append("<p>" + $("input[name=User]").val() +" | "+ $("input[name=ghostroom]").val() + " | " + $("input[name=ghosttype]").val() + "</p>").addClass("userslist"); 
+        // $("input[type=text]").val("")
     })
-});
+//});
 $("#remove").click(function () { 
     $("#list").empty();
+    $("#correctghost").empty()
     $("input[type=radio]").prop("checked", false);
     });
     $("input[name=ghosttype]").click(function() {
         getGhostType();
     })
+    $("#ghosts").click(function() {
+        if ($("#list:contains('Shade')").length > 0 && $("#list:contains('Foyer')").length > 0) {
+            $(".userslist").find(":contains('Shade')").css("background-color", "yellow")
+            $(".userslist").find(":contains('Foyer')").css("background-color", "yellow")
+        }
+    })
 });
-

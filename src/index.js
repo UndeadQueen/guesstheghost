@@ -3,6 +3,7 @@ const ghostType = $("input[name=typeguess]");
 const ghostRoom = $("input[name=roomguess]");
 let correctGhost = '';
 let correctUser = [""]
+const Values = [$(User), $(ghostType), $(ghostRoom)]
 // 
 function getGhostType() {
     switch (ghostType) {
@@ -77,27 +78,29 @@ function log(args) {
 }
 $(document).ready(function () {
     $(".submitbutton").click(function () {
-        try {
             if ($(User).val().length <= 0) {
-                alert("please fill out the required areas")
-                log("please fill out the required areas")
-            } else if ($(ghostRoom).val.length <= 0) {
-                alert("please fill out the required areas")
-                log("please fill out the required areas")
-            } else if ($(ghostType).val().length <= 0) {
-                alert("please fill out the required areas")
-                log("please fill out the required areas")
+                // alert("please fill out the required areas")
+                // log("please fill out the required areas")
+                $(User).css("background-color", "red")
+            } if ($(ghostRoom).val().length <= 0) {
+                // alert("please fill out the required areas")
+                // log("please fill out the required areas")
+                $(ghostRoom).css("background-color", "red")
+            } if ($(ghostType).val().length <= 0) {
+                // alert("please fill out the required areas")
+                // log("please fill out the required areas")
+                $(ghostType).css("background-color", "red")
             }
-             else {
+             if ($(User).val() && $(ghostRoom).val() && $(ghostType).val()) {
                 $("#list").append(function() {
                     $("#list").append("<p>" + User.val() +" | "+ ghostRoom.val() + " | " + ghostType.val() + "</p>").addClass("userslist")
                     $("input[type=text").val("")
                 })
+                $(User).css("background-color", "white")
+                $(ghostType).css("background-color", "white")
+                $(ghostRoom).css("background-color", "white")
             }
-        }
-        catch(err) {
-            console.log(err)
-        }
+
         // log("Hello world")
         // $("#list").append(function() {
         // $("#list").append("<p>" + $("input[name=User]").val() +" | "+ $("input[name=ghostroom]").val() + " | " + $("input[name=ghosttype]").val() + "</p>").addClass("userslist"); 

@@ -1,9 +1,9 @@
 const User = $("input[name=User]");
 const ghostType = $("input[name=typeguess]");
 const ghostRoom = $("input[name=roomguess]");
-let correctGhost = '';
-let correctUser = [""]
-const Values = [$(User), $(ghostType), $(ghostRoom)]
+let correctGhost;
+let correctRoom;
+
 // 
 function getGhostType() {
     switch (ghostType) {
@@ -116,9 +116,22 @@ $("#remove").click(function () {
         getGhostType();
     })
     $("#ghosts").click(function() {
-        if ($("#list:contains('Shade')").length > 0 && $("#list:contains('Foyer')").length > 0) {
-            $(".userslist").find(":contains('Shade')").css("background-color", "yellow")
-            $(".userslist").find(":contains('Foyer')").css("background-color", "yellow")
+        try {
+        if ($('#list:contains('+ correctGhost +')').length > 0) {
+            $(".userslist").find(':contains('+ correctGhost +')').css("background-color", "yellow")
+            log("ghost is currently " + correctGhost)
         }
+        if ($('#list:contains("'+ correctRoom +'")').length > 0) {
+            $(".userslist").find(':contains("'+ correctRoom +'")').css("background-color", "yellow")
+            log("room is currently " +  correctRoom)
+        }
+    } catch (err) {
+        console.log(err)
+    }
+    })
+    $("input.Shade").click(function() {
+        correctGhost = "Shade"
     })
 });
+
+// && $("#list:contains(" + correctRoom +"))").length > 0

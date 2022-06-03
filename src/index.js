@@ -1,77 +1,34 @@
+const GhostType = ["Phantom",
+"Shade",
+"Polterguist",
+"Demon",
+"Banshee", 
+"Jinn", 
+"Mare", 
+"Yokai", 
+"Myling", 
+"Raiju", 
+"Wraith", 
+"Revenant", 
+"Yurei", 
+"Hantu", 
+"Obake",
+"Spirit",
+"Onryo",
+"Phantom",
+"Goryo",
+"The Twins",
+"The mimic",
+"Oni"]
 const User = $("input[name=User]");
 const ghostType = $("input[name=typeguess]");
 const ghostRoom = $("input[name=roomguess]");
+const Ghosts = JSON.stringify(GhostType);
 let correctGhost;
 let correctRoom;
 
-// 
-function getGhostType() {
-    switch (ghostType) {
-        case $("input[class=Shade][type=radio]"):
-            $("ul").filter("Shade").css("background-color: yellow")
-            break;
-        case $("input[class=Banshee][type=radio]"):
-            $("ul").filter("Banshee").css("background-color: yellow")
-            break;
-        case $("input[type=radio][class=Polterguist]"):
-            $("ul").filter("Polterguist").css("background-color: yellow")
-            break;
-        case "Jinn":
-            $("ul").filter("Jinn")
-            break;
-        case "Mare":
-            $("ul").filter("Mare");
-            break;
-        case "Demon":
-
-            break;
-        case "Yokai":
-
-            break;
-        case "Myling":
-
-            break;
-        case "Raiju":
-            break;
-
-        case "Wraith":
-            break;
-        case "Revenant":
-            break;
-        case "Yurei":
-            break;
-
-        case "Hantu":
-            break;
-        case "Obake":
-            break;
-        case "Phantom":
-            break;
-        case "Oni":
-            break;
-        case "Goryo":
-            break;
-        case "The Twins":
-            break;
-        case "The Mimic":
-            break;
-        case "Spirit":
-            break;
-        case "Onryo":
-            break;
-    }
-    return ghostType;
-}
-function getGhostRoom() {
-    switch (ghostRoom) {
-        case value:
-
-            break;
-
-    }
-    return ghostRoom;
-}
-function getCorrectGhost(iscorrectGhost) {
+function uppercase(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1)
 }
 function log(args) {
     console.log(args)
@@ -93,28 +50,21 @@ $(document).ready(function () {
             }
              if ($(User).val() && $(ghostRoom).val() && $(ghostType).val()) {
                 $("#list").append(function() {
-                    $("#list").append("<p>" + User.val() +" | "+ ghostRoom.val() + " | " + ghostType.val() + "</p>").addClass("userslist")
+                    $("#list").append("<p>" + User.val() +" | "+ uppercase(ghostRoom.val()) + " | " + uppercase(ghostType.val()) + "</p>").addClass("userslist")
                     $("input[type=text").val("")
                 })
                 $(User).css("background-color", "white")
                 $(ghostType).css("background-color", "white")
                 $(ghostRoom).css("background-color", "white")
             }
-
-        // log("Hello world")
-        // $("#list").append(function() {
-        // $("#list").append("<p>" + $("input[name=User]").val() +" | "+ $("input[name=ghostroom]").val() + " | " + $("input[name=ghosttype]").val() + "</p>").addClass("userslist"); 
-        // $("input[type=text]").val("")
     })
 //});
 $("#remove").click(function () { 
     $("#list").empty();
     $("#correctghost").empty()
     $("input[type=radio]").prop("checked", false);
+    correctGhost = ""
     });
-    $("input[name=ghosttype]").click(function() {
-        getGhostType();
-    })
     $("#ghosts").click(function() {
         try {
         if ($('#list:contains('+ correctGhost +')').length > 0) {
@@ -129,9 +79,73 @@ $("#remove").click(function () {
         console.log(err)
     }
     })
-    $("input.Shade").click(function() {
+    $("input.Shade").click(function () {
         correctGhost = "Shade"
     })
+    $("input.Demon").click(function(){
+        correctGhost = "Demon"
+    })
+    $("input.Wraith").click(function() {
+        correctGhost = "Wraith"
+    })
+    $("input.Myling").click(function() {
+        correctGhost = "Myling"
+    })
+    $("input.Phantom").click(function() {
+        correctGhost = "Phantom"
+    })
+    $("input.Spirit").click(function() {
+        correctGhost = "Spirit"
+    })
+    $("input.Polterguist").click(function() {
+        correctGhost = "Polterguist"
+    })
+    $("input.Yokai").click(function() {
+        correctGhost = "Yokai"
+    })
+    $("input.Raiju").click(function() {
+        correctGhost = "Raiju"
+    })
+    $("input.Wraith").click(function() {
+        correctGhost = "Wraith"
+    })
+    $("input.Revenant").click(function() {
+        correctGhost = "Revenant"
+    })
+    $("input.Yurei").click(function () {
+        correctGhost = "Yurei"
+    })
+    $("input.Hantu").click(function() {
+        correctGhost = "Hantu"
+    })
+    $("input.Onryo").click(function() {
+        correctGhost = "Onryo"
+    })
+    $("input.Obake").click(function() {
+        correctGhost = "Obake"
+    })
+    $("input.Phantom").click(function() {
+        correctGhost = "Phantom"
+    })
+    $("input.Jinn").click(function() {
+        correctGhost = "Jinn"
+    })
+    $("input.Goryo").click(function() {
+        correctGhost = "Goryo"
+    })
+    $("input.Mimic").click(function() {
+        correctGhost = "Mimic"
+    })
+    $("input.Twins").click(function() {
+        correctGhost = "Twins"
+    })
+    $("input.Mare").click(function() {
+        correctGhost = "Mare"
+    })
+    $("input.Banshee").click(function() {
+        correctGhost = "Banshee"
+    })
+    $("input.Oni").click(function() {
+        correctGhost = "Oni"
+    })
 });
-
-// && $("#list:contains(" + correctRoom +"))").length > 0

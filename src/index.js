@@ -206,4 +206,7 @@ $("#remove").click(function () {
         correctRoom = "Attic"
         $(this).css("color", "blue")
     })
+    $(".bleasdale").click(function () {
+        window.location.href = "./bleasdale.html"
+    })
 });

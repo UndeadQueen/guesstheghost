@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTG - Grafton</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<body>
+    <p>User:</p>
+    <input
+      type="text"
+      name="User"
+      id="user"
+      class="User"
+      maxlength="20"
+      minlength="4"
+      required
+    />
+    <p>Ghost Room:</p>
+    <input
+      type="text"
+      name="roomguess"
+      id="ghostroom"
+      class="ghostroom"
+      minlength="5"
+      maxlength="27"
+      required
+    />
+    <p>Ghost Type:</p>
+    <input
+      type="text"
+      name="typeguess"
+      id="ghosttype"
+      class="ghosttype"
+      required
+    />
+    <input type="text" name="correctghost" id="correctghost" />
+    <button id="ghosts">select ghosts</button>
+    <button type="submit" class="submitbutton">Submit Guess</button>
+    <button type="remove" id="remove">Clear</button>
+    <h4>Winners :</h4>
+    <p class="winners"></p>
+    <div id="list"></div>
+    <div>
+      <!-- Ghost types -->
+        <p class="Spirittext ghostnames">Spirit</p>
+        <p class="Polterguisttext ghostnames">Polterguist</p>
+        <p class="Maretext ghostnames">Mare</p>
+        <p class="Demontext ghostnames">Demon</p>
+        <p class="Yokaitext ghostnames">Yokai</p>
+        <p class="Mylingtext ghostnames">Myling</p>
+        <p class="Raijutext ghostnames">Raiju</p>
+        <p class="Wraithtext ghostnames">Wraith</p>
+        <p class="Bansheetext ghostnames">Banshee</p>
+        <p class="Revenanttext ghostnames">Revenant</p>
+        <p class="Yureitext ghostnames">Yurei</p>
+        <p class="Hantutext ghostnames">Hantu</p>
+        <p class="Onryotext ghostnames">Onryo</p>
+        <p class="Obaketext ghostnames">Obake</p>
+        <p class="Phantomtext ghostnames">Phantom</p>
+        <p class="Jinntext ghostnames">Jinn</p>
+        <p class="Shadetext ghostnames">Shade</p>
+        <p class="Onitext ghostnames">Oni</p>
+        <p class="Goryotext ghostnames">Goryo</p>
+        <p class="Twinstext ghostnames">The Twins</p>
+        <p class="Mimictext ghostnames">The Mimic</p>
+        <!-- Ghost rooms -->
+        <p class="ghostrooms Foyer">Foyer</p>
+        <p class="ghostrooms Diningroom">Dining room</p>
+        <p class="ghostrooms Kitchen">Kitchen</p>
+        <p class="ghostrooms Workshop">Workshop</p>
+        <p class="ghostrooms Livingroom">Living room</p>
+        <p class="ghostrooms Mbedroom">Master bedroom</p>
+        <p class="ghostrooms Utility">Utility</p>
+        <p class="ghostrooms TBedroom">Twin bedroom</p>
+        <p class="ghostrooms UpstairsHway">Upstairs hallway</p>
+        <p class="ghostrooms Nursery">Nursery</p>
+        <p class="ghostrooms UBathroom">Upstairs bathrooom</p>
+        <p class="ghostrooms UBedroom">Upstairs bedroom</p>
+        <p class="ghostrooms Storage">Storage</p>
+    </div>
+</body>
+<script src="grafton.js"></script>
+</html>

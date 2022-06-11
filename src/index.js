@@ -220,6 +220,9 @@ $("#remove").click(function () {
     $(".grafton").click(function() {
         window.location.href = "./grafton.html"
     })
+    $(".willow").click(function() {
+        window.location.href = "./willow.html"
+    })
 });
 
 function main() {
@@ -230,4 +233,7 @@ function bleasdale() {
 }
 function grafton() {
     window.location.href = "grafton.html"
+}
+function willow(){
+    window.location.href = "willow.html"
 }

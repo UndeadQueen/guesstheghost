@@ -34,6 +34,7 @@ h4 {
 }
 .ghosts {
   position: absolute;
+  cursor: pointer;
 }
 .Shade {
   top: 330px;
@@ -203,6 +204,7 @@ div {
 .ghostrooms {
   position: absolute;
   left: 150px;
+  cursor: pointer;
 }
 
 .Foyer {
@@ -265,4 +267,30 @@ div {
 }
 .Storage {
   top: 235px;
+}
+.Garage {
+  top: -5px;
+}
+.BHallway {
+  top: 235px;
+}
+.LStorage {
+  top: 95px;
+}
+.RStorage {
+  top: 115px;
+}
+.Hallway2 {
+  top: 55px;
+}
+.BBedroom2 {
+  top: 175px;
+}
+.MBedroom2 {
+  top: 135px;
+  width: 120px;
+}
+.BHallway2{
+  top: 75px;
+  width: 120px;
 }

@@ -29,3 +29,10 @@ app.on('window-all-closed', () => {
     app.quit()
   }
 })
+app.on('web-contents-created', (event, webContents) => {
+  webContents.on('select-bluetooth-device', (event, device, callback) => {
+    event.preventDefault()
+    callback('')
+  })
+})
+delete require('electron').nativeImage.createThumbnailFromPath

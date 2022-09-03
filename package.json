@@ -8,9 +8,10 @@
   "name": "guesstheghost",
   "description": "Guess the ghost is a game that streamers and their chat can play where people can guess the ghost type and the ghost room and who ever gets that right wins a prize with the streamer's disgression",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",

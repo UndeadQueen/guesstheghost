@@ -4,5 +4,22 @@
   },
   "devDependencies": {
     "electron": "^6.1.12"
-  }
+  },
+  "name": "guesstheghost",
+  "description": "Guess the ghost is a game that streamers and their chat can play where people can guess the ghost type and the ghost room and who ever gets that right wins a prize with the streamer's disgression",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KingofUndead/guesstheghost.git"
+  },
+  "author": "Queen_of_Undead",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KingofUndead/guesstheghost/issues"
+  },
+  "homepage": "https://github.com/KingofUndead/guesstheghost#readme"
 }

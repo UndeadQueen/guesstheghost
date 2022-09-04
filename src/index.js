@@ -226,10 +226,14 @@ $("#remove").click(function () {
 });
 
 function main() {
-    window.location.href = "index.html"
+    if (window.location.href != "index.html") {
+        window.location.href = "index.html"
+    }
 }
 function bleasdale() {
-    window.location.href = "bleasdale.html"
+    if (window.location.href != "bleasdale.html") {
+        window.location.href = "bleasdale.html"
+    }
 }
 function grafton() {
     window.location.href = "grafton.html"

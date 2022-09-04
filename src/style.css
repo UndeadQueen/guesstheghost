@@ -294,3 +294,24 @@ div {
   top: 75px;
   width: 120px;
 }
+.GBRpurple{
+  top: 95px;
+}
+.TBBblue{
+  top: 155px;
+  height: 5px;
+  left: 150x;
+}
+.Foyer3{
+  top: 155px;
+}
+.ghosttypeframe{
+  width: 100px;
+  height: 100px;
+  /* background: transparent;
+  border: none !important; */
+  top: 10px;
+}
+#list{
+  cursor: pointer;
+}

@@ -315,3 +315,6 @@ div {
 #list{
   cursor: pointer;
 }
+iframe {
+  width: 125px;
+}

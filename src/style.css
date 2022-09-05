@@ -315,6 +315,8 @@ div {
 #list{
   cursor: pointer;
 }
+.ghost
 iframe {
   width: 125px;
+  cursor: pointer;
 }

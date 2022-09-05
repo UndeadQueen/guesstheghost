@@ -5,14 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test with no functionality</title>
 </head>
-<link rel="stylesheet" href="style.css">
+<!-- <link rel="stylesheet" href="style.css"> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <body>
     <style>
         iframe {
-            width: 87px;
+            width: 110px;
         }
     </style>
+    <script>
+        $(":file").on('change', function() {
+            var files = this.files[0]
+            if (files.size > 1024) {
+                alert("file is too big please upload something thats smaller than 1kb")
+            }
+        })
+
+        $("#upload").on('click', function() {
+            $.ajax({
+                url: 'upload.php',
+                type: 'file',
+                data: new FormData($('form') [0]),
+                cache: false,
+                contentType: false,
+                xhr: function () {
+                    var myxhr = $.ajaxSettings.xhr
+                    if (myxhr.upload) {
+                        myxhr.upload.addEventListener('progress', function(e) {
+                            if (e.lengthCompatable) {
+                                $('progress').attr({
+                                    value: e.loaded,
+                                    max: e.total
+                                })
+                            }
+                        }, false)
+                    }
+                    return myxhr
+                }
+            })
+        })
+    </script>
+    <input type="file" name="uploader" id="uploader">
+    <button id="upload">uploadimage</button>
     <iframe name="ghostgui" id="ghostgui" src="./src/selectghosts.html" frameborder="0"></iframe>
 </body>
+<script src="./src/selectghost.js"></script>
 </html>

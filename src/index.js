@@ -3,6 +3,7 @@ const ghostType = $("input[name=typeguess]");
 const ghostRoom = $("input[name=roomguess]");
 let correctGhost;
 let correctRoom;
+let main, bleasdale, willow, grafton, ridgeview
 function uppercase(str) {
     return str.charAt(0).toUpperCase() + str.slice(1)
 }
@@ -215,29 +216,34 @@ $("#remove").click(function () {
         $(this).css("color", "blue")
     })
     $(".bleasdale").click(function () {
-        window.location.href = "./bleasdale.html"
+        getMap(bleasdale)
     })
     $(".grafton").click(function() {
-        window.location.href = "./grafton.html"
+        getMap(grafton)
     })
     $(".willow").click(function() {
-        window.location.href = "./willow.html"
+        getMap(willow)
     })
 });
 
-function main() {
-    if (window.location.href != "index.html") {
-        window.location.href = "index.html"
+function getMap(name) {
+    if (name === main) {
+        if (window.location.href != "index.html") {
+            window.location.href = "index.html"
+        }
     }
-}
-function bleasdale() {
-    if (window.location.href != "bleasdale.html") {
-        window.location.href = "bleasdale.html"
+    if (name === willow) {
+        window.location.href = "willow.html"
     }
-}
-function grafton() {
-    window.location.href = "grafton.html"
-}
-function willow(){
-    window.location.href = "willow.html"
+    if (name === bleasdale) {
+        if (window.location.href != "bleasdale.html") {
+            window.location.href = "bleasdale.html"
+        }
+    }
+    if (name === grafton) {
+        window.location.href = "grafton.html"
+    }
+    if (name === ridgeview) {
+        window.location.href = "ridgeview.html"
+    }
 }

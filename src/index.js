@@ -70,7 +70,7 @@ $("#remove").click(function () {
             log("room is currently " +  correctRoom)
         }
     })
-    //$("body").addClass("backgroundimage").css("background-image", background)
+
     $("input.Shade").click(function(){
         correctGhost = "Shade"
     })

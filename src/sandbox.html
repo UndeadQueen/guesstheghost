@@ -7,42 +7,21 @@
 </head>
 <!-- <link rel="stylesheet" href="style.css"> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./selectghost.js"></script>
+<script src="./ghostrooms.js"></script>
 <body>
     <style>
         iframe {
             width: 110px;
         }
     </style>
-    <script>
-        let main, bleasdale, willow, grafton, ridgeview
-function getMap(name) {
-    if (name = main) {
-        if (window.location.href != "index.html") {
-            console.log(name)
-        }
-    }
-    if (name = willow) {
-        console.log(name)
-    }
-    if (name = bleasdale) {
-        if (window.location.href != "bleasdale.html") {
-            console.log(name)
-        }
-    }
-    if (name = grafton) {
-        console.log(name)
-    }
-    if (name = ridgeview) {
-        console.log(name)
-    }
-} 
-function log(args) {
-    console.log(args)
-}
-    </script>
+    <script>$(document).ready(function() {
+        getGhostrooms()
+    })</script>
     <input type="file" name="uploader" id="uploader">
     <button id="upload">uploadimage</button>
+    <attic></attic>
     <iframe name="ghostgui" id="ghostgui" src="./selectghosts.html" frameborder="0"></iframe>
+    <iframe src="./ghostrooms.html" frameborder="1"></iframe>
 </body>
-<script src="./selectghost.js"></script>
 </html>

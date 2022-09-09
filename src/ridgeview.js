@@ -19,24 +19,24 @@ function log(args) {
 function clearroomguess() {
     
 }
-// Isguiopened = false
-// function getghostgui() {
-//     if (Isguiopened === false) {
-//         $("#ghostgui").show()
-//     }
-//     else {
-//         $("#ghostgui").hide()
-//     }
-// }
-// Isopened = false
-// function Getroomgui() {
-//     if (Isopened === false) {
-//         $("#roomgui").show()
-//     }
-//     else {
-//         $("#roomgui").hide()
-//     }
-// }
+Isguiopened = false
+function getghostgui() {
+    if (Isguiopened === false) {
+        $("#ghostgui").show()
+    }
+    else {
+        $("#ghostgui").hide()
+    }
+}
+Isopened = false
+function Getroomgui() {
+    if (Isopened === false) {
+        $("#roomgui").show()
+    }
+    else {
+        $("#roomgui").hide()
+    }
+}
 function clearghostguess() {
     $(".Shadetext").css("color", "black")
     $(".Demontext").css("color", "black")
@@ -100,25 +100,35 @@ $("#ghosts").click(function() {
         log("room is currently " +  correctRoom)
     }
 })
-// $("#ghostgui").hide()
-// $("#roomgui").hide()
-// $("#ghosttypes").click(function() {
-//     getghostgui()
-//    if(Isguiopened === true) {
-//     Isguiopened = false
-//    }
-//    else if (Isguiopened === false) {
-//     Isguiopened = true
-//    }
-// })
-// $("#roomguibutton").click(function() {
-//     Getroomgui()
-//     if (Isopened === true) {
-//         Isopened = false
-//     }
-//     else if (Isopened === false) {
-//         Isopened = true
-//     }
-// })
+$("#ghostgui").hide()
+$("#roomgui").hide()
+$("#ghosttypes").click(function() {
+    getghostgui()
+   if(Isguiopened === true) {
+    Isguiopened = false
+   }
+   else if (Isguiopened === false) {
+    Isguiopened = true
+   }
+})
+$("#roomguibutton").click(function() {
+    Getroomgui()
+    if (Isopened === true) {
+        Isopened = false
+    }
+    else if (Isopened === false) {
+        Isopened = true
+    }
+})
+$("#BBedroom2").hide()
+    $("#LStorage").hide()
+    $("#RStorage").hide()
+    $("#Workshop").hide()
+    $("BHallway").hide()
+    $("#SBathroom").hide()
+    $("#GBedroom").hide()
+    $("#BBedroom").hide()
+    $("#Attic").hide()
+ridgeviewMap()
 ghosttypes()
 })

@@ -1,4 +1,3 @@
-var map
 function ridgeview() {
     $("#BBedroom2").hide()
     $("#LStorage").hide()

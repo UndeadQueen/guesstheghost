@@ -18,8 +18,10 @@ function getGhostrooms() {
     $('mbedroom').text("Master bedroom")
     $('bbedroom').text("Boys bedroom")
     $('bathroom').text("Bathroom")
-    $('bhallway').text("Basement hallway")
-
+    $('utility').text("Utility")
+    $('gbedroom').text("Girls bedroom")
+    $('toilet').text("Toilet")
+    $('uhallway').text("Upstairs hallway")
 }
 document.createElement("attic")
 document.createElement("livingroom")
@@ -48,7 +50,10 @@ document.createElement('utoilet')
 document.createElement('bbedroomaqua')
 document.createElement('basement')
 $(document).ready(function() {
-    ridgeview()
+    // if (document.URL = "sandbox.html") {
+    //     getGhostrooms()
+    // }
+    getGhostrooms()
     $("#Foyer").click(function() {
         correctRoom = "Foyer"
         console.log(correctRoom)

@@ -120,15 +120,5 @@ $("#roomguibutton").click(function() {
         Isopened = true
     }
 })
-$("#BBedroom2").hide()
-    $("#LStorage").hide()
-    $("#RStorage").hide()
-    $("#Workshop").hide()
-    $("BHallway").hide()
-    $("#SBathroom").hide()
-    $("#GBedroom").hide()
-    $("#BBedroom").hide()
-    $("#Attic").hide()
-ridgeviewMap()
-ghosttypes()
+getGhostrooms()
 })

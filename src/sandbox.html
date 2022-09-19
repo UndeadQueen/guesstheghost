@@ -10,20 +10,32 @@
 <script src="./selectghost.js"></script>
 <script src="./ghostrooms.js"></script>
 <body>
-    <style>
-        iframe {
-            width: 110px;
-        }
-    </style>
-    <script>$(document).ready(function() {
-        getGhostrooms()
-    })</script>
-    <input type="file" name="uploader" id="uploader">
-    <garage></garage>
-    <button id="upload">uploadimage</button>
-    <!-- <iframe name="ghostgui" id="ghostgui" src="./selectghosts.html" frameborder="0"></iframe> -->
-    <iframe src="./ghostrooms.html" frameborder="1">
-        
-    </iframe>
+    <div>
+        <style>
+            iframe {
+                width: 110px;
+            }
+            .flex-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                height: 10px;
+                width: auto;
+            }
+        </style>
+        <script>
+            ridgeview()
+        </script>
+        <div id="ghostsrooms"></div>
+        <input type="file" name="uploader" id="uploader">
+        <garage></garage>
+        <button id="upload">uploadimage</button>
+        <iframe name="ghostgui" id="ghostgui" src="./selectghosts.html" frameborder="0"></iframe>
+        <iframe name="roomgui" id="ghostroomgui" src="./ghostrooms.html"></iframe>
+        <div class="flex-container"></div>
+        <button id="Ghostrooms">Show Ghostrooms</button>
+        <div id="Roomgui">Hello there</div>
+        <input type="color">
+    </div>
 </body>
 </html>

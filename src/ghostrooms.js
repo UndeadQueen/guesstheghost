@@ -1,62 +1,47 @@
+let text = ""
+let isGuishown = false
 function ridgeview() {
-    $("#BBedroom2").hide()
-    $("#LStorage").hide()
-    $("#RStorage").hide()
-    $("#Workshop").hide()
-    $("#BHallway").hide()
-    $("#SBathroom").hide()
-    $("#GBedroom").hide()
-    $("#BBedroom").hide()
-    $("#Attic").hide()
-    console.log("Ridgeview")
+    $("#ghostsrooms").append("<p>Text</p>").click(function() {
+        $(this).css("color", "blue")
+        text = "Text"
+        console.log(text)
+    }).css("width", "10px")
+    $("#ghostsrooms").append("<p>Text2</p>").click(function() {
+        $(this).css("color", "blue")
+        text = "Text2"
+        console.log(text)
+    }).css("width", "10px")
 }
-function getGhostrooms() {
-    $('lroom').text("Living room")
-    $('kitchen').text("Kitchen")
-    $('garage').text("Garage")
-    $('hallway').text("Hallway")
-    $('mbedroom').text("Master bedroom")
-    $('bbedroom').text("Boys bedroom")
-    $('bathroom').text("Bathroom")
-    $('utility').text("Utility")
-    $('gbedroom').text("Girls bedroom")
-    $('toilet').text("Toilet")
-    $('uhallway').text("Upstairs hallway")
+
+function getGui() {
+    if (!isGuishown) {
+        $("#Roomgui").hide()
+    }
+    if (isGuishown){
+      $("#Roomgui").show()
+        }
 }
-document.createElement("attic")
-document.createElement("livingroom")
-document.createElement("kitchen")
-document.createElement("garage")
-document.createElement("hallway")
-document.createElement("mbedroom")
-document.createElement("bbedroom")
-document.createElement('bathroom')
-document.createElement('bhallway')
-document.createElement('rstorage')
-document.createElement('lstorage')
-document.createElement('foyer')
-document.createElement('lroom')
-document.createElement('dining')
-document.createElement('workshop')
-document.createElement('toilet')
-document.createElement('uhallway')
-document.createElement('bathroom')
-document.createElement('utility')
-document.createElement('sbathroom')
-document.createElement('gbedroom')
-document.createElement('gbrpurple')
-document.createElement('tbbblue')
-document.createElement('utoilet')
-document.createElement('bbedroomaqua')
-document.createElement('basement')
 $(document).ready(function() {
-    // if (document.URL = "sandbox.html") {
-    //     getGhostrooms()
-    // }
-    getGhostrooms()
+    $("#Roomgui").hide()
+    $("#Ghostrooms").click(function() {
+        if (!isGuishown) {
+            isGuishown = true
+        }
+        else {
+            isGuishown = false
+        }
+        console.log(isGuishown)
+        getGui()
+    })
+
+    console.log(isGuishown)
     $("#Foyer").click(function() {
         correctRoom = "Foyer"
         console.log(correctRoom)
         $(this).css("color", "blue")
     })
 })
+
+// nothing in this file works besides the click event and the show gui works, why!?
+// the gui isn't being hidden
+// why is get getGui called 3 times

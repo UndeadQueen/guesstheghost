@@ -51,7 +51,6 @@ $(document).ready(function () {
                 $(ghostRoom).css("background-color", "white")
             }
     })
-//});
 $("#remove").click(function () { 
     $("#list").empty();
     $("#correctghost").empty()

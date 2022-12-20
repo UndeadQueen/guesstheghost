@@ -24,7 +24,35 @@
             }
         </style>
         <script>
-            ridgeview()
+            const color = ""
+            let isColoropen
+            $(document).ready(function() {
+                function colorchange() {
+                    if (isColoropen) {
+                        $("#colors").show()
+                    }
+                    else {
+                        $("#colors").hide()
+                    }
+                }
+                $("#dropdown").click(function() {
+                    if (isColoropen) {
+                        isColoropen = false
+                        console.log(isColoropen)
+                    } else {
+                        isColoropen = true
+                        console.log(isColoropen)
+                    }
+                    colorchange()
+                })
+                $("#red").click(function() {
+                    $("body").css("background-color", "red")
+                })
+                $("#white").click(function() {
+                    $("body").css("background-color", "white")
+                })
+                $("#colors").hide()
+            })
         </script>
         <div id="ghostsrooms"></div>
         <input type="file" name="uploader" id="uploader">
@@ -35,7 +63,11 @@
         <div class="flex-container"></div>
         <button id="Ghostrooms">Show Ghostrooms</button>
         <div id="Roomgui">Hello there</div>
-        <input type="color">
+        <button  id="dropdown">color drop down</button>
+        <div id="colors">
+            <p id="red">Red</p>
+            <p id="white">White</p>
+        </div>
     </div>
 </body>
 </html>

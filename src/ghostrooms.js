@@ -17,9 +17,9 @@ function getGui() {
     if (!isGuishown) {
         $("#Roomgui").hide()
     }
-    if (isGuishown){
-      $("#Roomgui").show()
-        }
+    else {
+        $("#Roomgui").show()
+    }
 }
 $(document).ready(function() {
     $("#Roomgui").hide()
@@ -33,7 +33,6 @@ $(document).ready(function() {
         console.log(isGuishown)
         getGui()
     })
-
     console.log(isGuishown)
     $("#Foyer").click(function() {
         correctRoom = "Foyer"

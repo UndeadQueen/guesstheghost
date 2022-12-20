@@ -111,6 +111,7 @@ $("#ghosttypes").click(function() {
     Isguiopened = true
    }
 })
+ridgeview()
 $("#roomguibutton").click(function() {
     Getroomgui()
     if (Isopened === true) {

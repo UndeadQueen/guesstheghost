@@ -16,21 +16,7 @@ function log(args) {
     console.log(args)
 }
 function clearroomguess() {
-    $(".Foyer").css("color", "black")
-    $(".Livingroom").css("color", "black")
-    $(".Kitchen").css("color", "black")
-    $(".DiningRoom").css("color", "black")
-    $(".Hallway").css("color", "black")
-    $(".Workshop").css("color", "black")
-    $(".Toilet").css("color", "black")
-    $(".UpstairsHway").css("color", "black")
-    $(".Bathroom").css("color", "black")
-    $(".Utility").css("color", "black")
-    $(".MBedroom").css("color", "black")
-    $(".SBathroom").css("color", "black")
-    $(".GBedroom").css("color", "black")
-    $(".BBedroom").css("color", "black")
-    $(".Attic").css("color", "black")
+    $(".ghostrooms").css("color", "black")
 }
 $(document).ready(function () {
     $(".submitbutton").click(function () {
@@ -215,13 +201,13 @@ $("#remove").click(function () {
         $(this).css("color", "blue")
     })
     $(".bleasdale").click(function () {
-        window.location.href = "./bleasdale.html"
+        getMap(bleasdale)
     })
     $(".grafton").click(function() {
-        window.location.href = "./grafton.html"
+        getMap(grafton)
     })
     $(".willow").click(function() {
-        window.location.href = "./willow.html"
+        getMap(willow)
     })
 });
 

@@ -1,26 +1,6 @@
 
 function clearghostguess() {
-    $(".Shadetext").css("color", "black")
-    $(".Demontext").css("color", "black")
-    $(".Phantomtext").css("color", "black")
-    $(".Polterguisttext").css("color", "black")
-    $(".Bansheetext").css("color", "black")
-    $(".Jinntext").css("color", "black")
-    $(".Maretext").css("color", "black")
-    $(".Yokaitext").css("color", "black")
-    $(".Mylingtext").css("color", "black")
-    $(".Raijutext").css("color", "black")
-    $(".Wraithtext").css("color", "black")
-    $(".Revenanttext").css("color", "black")
-    $(".Yureitext").css("color", "black")
-    $(".Hantutext").css("color", "black")
-    $(".Obaketext").css("color", "black")
-    $(".Spirittext").css("color", "black")
-    $(".Onryotext").css("color", "black")
-    $(".Goryotext").css("color", "black")
-    $(".Twinstext").css("color", "black")
-    $(".Mimictext").css("color", "black")
-    $(".Onitext").css("color", "black")
+    $('.ghostnames').css("color", "black");
 }
 function ghosttypes() {
     $(".Shadetext").click(function(){

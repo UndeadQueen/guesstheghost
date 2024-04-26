@@ -201,37 +201,15 @@ $("#remove").click(function () {
         $(this).css("color", "blue")
     })
     $(".bleasdale").click(function () {
-        getMap(bleasdale)
+        window.location.href = "bleasdale.html"
     })
     $(".grafton").click(function() {
-        getMap(grafton)
+        window.location.href = "grafton.html"
     })
     $(".willow").click(function() {
-        getMap(willow)
+        window.location.href = "willow.html"
+    })
+    $(".ridgeview").click(function () {
+        window.location.href = "ridgeview.html"
     })
 });
-
-function getMap(name) {
-    if (name === main) {
-        if (window.location.href != "index.html") {
-            window.location.href = "index.html"
-        }
-    }
-    if (name === willow) {
-        window.location.href = "willow.html"
-        if (window.location.href != "willow.html") {
-            window.location.href = "willow.html"
-        }
-    }
-    if (name === bleasdale) {
-        if (window.location.href != "bleasdale.html") {
-            window.location.href = "bleasdale.html"
-        }
-    }
-    else if (name === grafton) {
-        window.location.href = "grafton.html"
-    }
-    else if (name === ridgeview) {
-        window.location.href = "ridgeview.html"
-    }
-}

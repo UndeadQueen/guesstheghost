@@ -3,7 +3,6 @@ const ghostType = $("input[name=typeguess]");
 const ghostRoom = $("input[name=roomguess]");
 let correctGhost;
 let correctRoom;
-let main, bleasdale, willow, grafton, ridgeview
 function uppercase(str) {
     return str.charAt(0).toUpperCase() + str.slice(1)
 }
@@ -12,29 +11,26 @@ function removeguess(string) {
         $(this).remove()
     })
 }
-function log(args) {
-    console.log(args)
-}
 function clearroomguess() {
     $(".ghostrooms").css("color", "black")
 }
 $(document).ready(function () {
     $(".submitbutton").click(function () {
-            if ($(User).val().length <= 0) {
-                $(User).css("background-color", "red")
-            } if ($(ghostRoom).val().length <= 0) {
-                $(ghostRoom).css("background-color", "red")
+            if (User.val().length <= 0) {
+                User.css("background-color", "red")
+            } if (ghostRoom.val().length <= 0) {
+                ghostRoom.css("background-color", "red")
             } if ($(ghostType).val().length <= 0) {
                 $(ghostType).css("background-color", "red")
             }
-             if ($(User).val() && $(ghostRoom).val() && $(ghostType).val()) {
+             if (User.val() && ghostRoom.val() && ghostType.val()) {
                 $("#list").append(function() {
                     removeguess($("#list").append("<p>" + User.val() +" | "+ uppercase(ghostRoom.val()) + " | " + uppercase(ghostType.val()) + "</p>").addClass("userslist"))
                     $("input[type=text").val("")
                 })
-                $(User).css("background-color", "white")
-                $(ghostType).css("background-color", "white")
-                $(ghostRoom).css("background-color", "white")
+                User.css("background-color", "white")
+                ghostType.css("background-color", "white")
+                ghostRoom.css("background-color", "white")
             }
     })
 $("#remove").click(function () { 
@@ -48,11 +44,11 @@ $("#remove").click(function () {
     $("#ghosts").click(function() {
         if ($('#list:contains('+ correctGhost +')').length > 0) {
             $(".userslist").find(':contains('+ correctGhost +')').css("background-color", "yellow")
-            log("ghost is currently " + correctGhost)
+            console.log("ghost is currently " + correctGhost)
         }
         if ($('#list:contains("'+ correctRoom +'")').length > 0) {
             $(".userslist").find(':contains("'+ correctRoom +'")').css("background-color", "yellow")
-            log("room is currently " +  correctRoom)
+            console.log("room is currently " +  correctRoom)
         }
     })
 
